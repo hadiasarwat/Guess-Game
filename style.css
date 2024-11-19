@@ -1,0 +1,107 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+}
+body{
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+font-family: "Barlow Condensed", sans-serif;
+font-weight: 200;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box, .prompt_box{
+    width: 500px;
+    height: 400px;
+    background: white;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box :is(h1, p, form){
+    margin: 8px;
+}
+
+form{
+    flex-direction: column;
+}
+form input{
+    margin-bottom: 8px;
+    width: 350px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 4px solid #00000073;
+}
+.btn{
+    width: 150px;
+    height: 55px;
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-top:30px;
+    background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.prompt_box{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.prompt_box h1{
+    margin-bottom: 10px;
+}
+.prompt_box.active{
+    display: flex;
+}
+
+/* Media Queries for Responsive Design */
+
+   /* For Mobiles */
+@media only screen and (max-width: 480px) {
+    .box, .prompt_box {
+      width: 100%;
+      height: 80vh;
+    }
+    form input {
+      width: 100%;
+      height: 40px;
+    }
+    .btn {
+      width: 100px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* For Extra Small Mobiles */
+  @media only screen and (max-width: 320px) {
+    .box, .prompt_box {
+      width: 100%;
+      height: 80vh;
+    }
+    form input {
+      width: 100%;
+      height: 30px;
+    }
+    .btn {
+      width: 80px;
+      height: 30px;
+      font-size: 1rem;
+    }
+  }
